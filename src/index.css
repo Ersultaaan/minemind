@@ -1,0 +1,53 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #0a0a0f;
+  --surface: #111118;
+  --surface2: #1a1a24;
+  --surface3: #22222f;
+  --border: #2a2a3a;
+  --border2: #3a3a50;
+  --accent: #7c6af5;
+  --accent2: #a594f9;
+  --accent-dim: #3d3578;
+  --danger: #f05555;
+  --danger-dim: #5c1f1f;
+  --flag: #f5a623;
+  --flag-dim: #5c3d0a;
+  --success: #3ecf8e;
+  --success-dim: #0e4030;
+  --text: #e8e8f0;
+  --text2: #9090a8;
+  --text3: #5a5a70;
+  --cell: #1e1e2a;
+  --cell-open: #141420;
+  --cell-hover: #26263a;
+  --mono: 'Space Mono', monospace;
+  --display: 'Syne', sans-serif;
+  --rad: 8px;
+  --rad2: 12px;
+  --rad3: 16px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--display);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  75% { transform: translateX(3px); }
+}
+
+@keyframes pulse-safe {
+  0%, 100% { background: var(--cell); }
+  50% { background: var(--success-dim); border-color: var(--success); }
+}

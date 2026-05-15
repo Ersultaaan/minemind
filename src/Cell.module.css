@@ -1,0 +1,81 @@
+.cell {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.12s, transform 0.08s;
+  border: 1px solid transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.closed {
+  background: var(--cell);
+  border-color: var(--border);
+}
+
+.closed:hover {
+  background: var(--cell-hover);
+  border-color: var(--border2);
+  transform: scale(1.06);
+}
+
+.open {
+  background: var(--cell-open);
+  cursor: default;
+  border-color: transparent;
+}
+
+.flagged {
+  background: var(--flag-dim);
+  border-color: var(--flag);
+}
+
+.mineRev {
+  background: var(--danger-dim);
+  border-color: var(--danger);
+}
+
+.mineHit {
+  background: var(--danger);
+  border-color: #ff8888;
+  animation: shake 0.25s;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  75% { transform: translateX(3px); }
+}
+
+.n1 { color: #7cb8ff; }
+.n2 { color: #3ecf8e; }
+.n3 { color: #f05555; }
+.n4 { color: #a594f9; }
+.n5 { color: #f5a623; }
+.n6 { color: #5dd8f0; }
+.n7 { color: #e8e8f0; }
+.n8 { color: #9090a8; }
+
+@media (max-width: 500px) {
+  .cell {
+    width: 28px;
+    height: 28px;
+    font-size: 11px;
+    border-radius: 4px;
+  }
+}
+
+@media (max-width: 380px) {
+  .cell {
+    width: 22px;
+    height: 22px;
+    font-size: 9px;
+  }
+}
